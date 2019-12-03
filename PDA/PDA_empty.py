@@ -23,7 +23,7 @@ def getMoves(state,automata):#q0 - 0011
                     if len(stack) > 0:
                         if stack[len(stack)-1] == r[2]:                            
                             topStack = r[3]                        
-                            handler.write("E - state change of " + str(state) + " to " + str(topStack[0]) + "\n")
+                            print("E - state change of " + str(state) + " to " + str(topStack[0]) + "\n")
                             if topStack[1] == 'E':
                                 stack.pop()
                                 topStack.append(r[2])
@@ -33,18 +33,18 @@ def getMoves(state,automata):#q0 - 0011
                                     for i in range(1,len(topStack)-1):
                                         stack.append(topStack[i])                                    
                                 register.append(topStack)
-                            handler.write("stack: " + str(stack) + "\n\n")
+                            print("stack: " + str(stack) + "\n\n")
                             nextState = topStack[0]                            
                             getMoves(nextState,automata)                            
                             handleStack(stack)
-                            handler.write("Rollback to state " + str(state) + " with stack " + str(stack) + "\n\n")
+                            print("Rollback to state " + str(state) + " with stack " + str(stack) + "\n\n")
 
             elif automata[index] == r[1]: #[q0 0 z0 [q0 0 z0]]                
                 if state == r[0]:
                     if len(stack) > 0:
                         if stack[len(stack)-1] == r[2]: 
                             topStack = r[3] #[q0 0 z0]                            
-                            handler.write(str(automata[index]) + " - state change from " + str(state) + " to " + str(topStack[0]) + "\n")                            
+                            print(str(automata[index]) + " - state change from " + str(state) + " to " + str(topStack[0]) + "\n")                            
                             if topStack[1] == 'E':
                                 stack.pop()
                             elif len(topStack) >= 3:
@@ -56,16 +56,16 @@ def getMoves(state,automata):#q0 - 0011
                                 register.append(topStack)
                             else:
                                 register.append(topStack)
-                            handler.write("stack: " + str(stack) + "\n\n")                            
+                            print("stack: " + str(stack) + "\n\n")                            
                             nextState = topStack[0]
                             index = index + 1                            
                             getMoves(nextState,automata)
                             index = index - 1                            
                             handleStack(stack)
-                            handler.write("Rollback to state " + str(state) + " with stack " + str(stack) + "\n\n")
+                            print("Rollback to state " + str(state) + " with stack " + str(stack) + "\n\n")
         elif len(stack) == 0:
             flag = 1
-            handler.write("------ACCEPTED HERE!------\n\n")            
+            print("------ACCEPTED HERE!------\n\n")            
             return
 
 def principal(automata, defAutomata):
@@ -104,22 +104,21 @@ def principal(automata, defAutomata):
         rules[i] = aux #[q0 0 z0 [q0 0 z0 ]]
         print (rules[i])
     
-    handler = open("resultado.txt","w")
-    handler.write("Alphabet: " + str(alphabet) + "\n" + "States: " +
+    print("Alphabet: " + str(alphabet) + "\n" + "States: " +
             str(states) + "\n" + "Initial State: " + str(initial_state) + "\n" + 
             "Stack symbol: " + str(stack[0])
             + "\n\nrules: " + "\n")
 
     for i in range(0,n_rules):
         aux = rules[i]
-        handler.write(str(i+1) + ") " + "(" + str(aux[0]) + "," + str(aux[1]) + "," + str(aux[2]) + ") = " + str(aux[3])+"\n")
+        print(str(i+1) + ") " + "(" + str(aux[0]) + "," + str(aux[1]) + "," + str(aux[2]) + ") = " + str(aux[3])+"\n")
 
-    handler.write("\n")
+    print("\n")
 
-    handler.write("\n----------Ramificacoes geradas---------\n\n")
-    handler.write("automata inserida: " + automata + "\n")
+    print("\n----------Ramificacoes geradas---------\n\n")
+    print("automata inserida: " + automata + "\n")
 
-    handler.write('\n')
+    print('\n')
 
     index = 0
     flag = 0
@@ -128,12 +127,10 @@ def principal(automata, defAutomata):
     getMoves(initial_state[0],automata)
 
     if flag == 0:
-        handler.write(automata+ " -> The tape was reject!")
+        print(automata+ " -> The tape was reject!")
     elif flag == 1:
-        handler.write(automata+ " -> The tape was accept!")
+        print(automata+ " -> The tape was accept!")
 
-
-    handler.close()
 
 
 principal('0011',"./automata_empty_definition.txt")

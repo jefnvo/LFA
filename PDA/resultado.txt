@@ -24,7 +24,7 @@ rules:
 
 ----------Ramificacoes geradas---------
 
-automata inserida: 01011
+automata inserida: 0011
 
 E - state change of p0 to q0
 stack: ['x0', 'z0']
@@ -32,22 +32,28 @@ stack: ['x0', 'z0']
 0 - state change from q0 to q0
 stack: ['x0', 'z0', '0']
 
-1 - state change from q0 to q0
-stack: ['x0', 'z0']
-
 0 - state change from q0 to q0
+stack: ['x0', 'z0', '0', '0']
+
+1 - state change from q0 to q0
 stack: ['x0', 'z0', '0']
 
 1 - state change from q0 to q0
 stack: ['x0', 'z0']
 
-1 - state change from q0 to q0
-stack: ['x0', 'z0', '1']
+E - state change of q0 to q0
+stack: ['x0']
 
 E - state change of q0 to p
-stack: ['x0', 'z0']
+stack: []
 
-E - state change of p to p
+------ACCEPTED HERE!------
+
+Rollback to state q0 with stack ['x0']
+
+Rollback to state q0 with stack ['x0', 'z0']
+
+E - state change of q0 to p
 stack: ['x0']
 
 E - state change of p to p
@@ -57,30 +63,6 @@ stack: []
 
 Rollback to state p with stack ['x0']
 
-Rollback to state p with stack ['x0', 'z0']
-
-Rollback to state q0 with stack ['x0', 'z0', '1']
-
-Rollback to state q0 with stack ['x0', 'z0']
-
-E - state change of q0 to q0
-stack: ['x0']
-
-E - state change of q0 to p
-stack: []
-
-Rollback to state q0 with stack ['x0']
-
-Rollback to state q0 with stack ['x0', 'z0']
-
-E - state change of q0 to p
-stack: ['x0']
-
-E - state change of p to p
-stack: []
-
-Rollback to state p with stack ['x0']
-
 Rollback to state q0 with stack ['x0', 'z0']
 
 Rollback to state q0 with stack ['x0', 'z0', '0']
@@ -100,19 +82,15 @@ Rollback to state p with stack ['x0', 'z0']
 
 Rollback to state q0 with stack ['x0', 'z0', '0']
 
-Rollback to state q0 with stack ['x0', 'z0']
-
-E - state change of q0 to q0
-stack: ['x0']
+Rollback to state q0 with stack ['x0', 'z0', '0', '0']
 
 E - state change of q0 to p
-stack: []
+stack: ['x0', 'z0', '0']
 
-Rollback to state q0 with stack ['x0']
+E - state change of p to p
+stack: ['x0', 'z0']
 
-Rollback to state q0 with stack ['x0', 'z0']
-
-E - state change of q0 to p
+E - state change of p to p
 stack: ['x0']
 
 E - state change of p to p
@@ -120,7 +98,11 @@ stack: []
 
 Rollback to state p with stack ['x0']
 
-Rollback to state q0 with stack ['x0', 'z0']
+Rollback to state p with stack ['x0', 'z0']
+
+Rollback to state p with stack ['x0', 'z0', '0']
+
+Rollback to state q0 with stack ['x0', 'z0', '0', '0']
 
 Rollback to state q0 with stack ['x0', 'z0', '0']
 
@@ -163,4 +145,4 @@ Rollback to state q0 with stack ['x0', 'z0']
 
 Rollback to state p0 with stack ['x0']
 
-01011 -> The tape was accept!
+0011 -> The tape was accept!
