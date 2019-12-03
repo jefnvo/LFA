@@ -1,0 +1,16 @@
+Alphabet: ['0', '1']
+States: ['q0']
+Initial State: q0
+
+Stack symbol: z0
+
+
+Regras: 
+1) (q0,0,z0) = q0 0,z0
+2) (q0,1,z0) = q0 1,z0
+3) (q0,0,0) = q0 0,0
+4) (q0,1,1) = q0 1,1
+5) (q0,0,1) = q0 E
+6) (q0,1,0) = q0 E
+7) (q0,E,0) = q0 E
+
