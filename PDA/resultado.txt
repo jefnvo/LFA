@@ -1,16 +1,166 @@
 Alphabet: ['0', '1']
-States: ['q0']
-Initial State: q0
+States: ['q0', 'p0', 'p']
+Initial State: ['p0']
+Stack symbol: x0
 
-Stack symbol: z0
+rules: 
+1) (q0,0,z0) = ['q0', '0', 'z0']
+2) (q0,1,z0) = ['q0', '1', 'z0']
+3) (q0,0,0) = ['q0', '0', '0']
+4) (q0,1,1) = ['q0', '1', '1']
+5) (q0,1,0) = ['q0', 'E']
+6) (q0,0,1) = ['q0', 'E']
+7) (q0,E,z0) = ['q0', 'E']
+8) (p0,E,x0) = ['q0', 'z0', 'x0']
+9) (q0,E,z0) = ['p', 'E']
+10) (q0,E,x0) = ['p', 'E']
+11) (q0,E,0) = ['p', 'E']
+12) (q0,E,1) = ['p', 'E']
+13) (p,E,0) = ['p', 'E']
+14) (p,E,1) = ['p', 'E']
+15) (p,E,z0) = ['p', 'E']
+16) (p,E,x0) = ['p', 'E']
 
 
-Regras: 
-1) (q0,0,z0) = q0 0,z0
-2) (q0,1,z0) = q0 1,z0
-3) (q0,0,0) = q0 0,0
-4) (q0,1,1) = q0 1,1
-5) (q0,0,1) = q0 E
-6) (q0,1,0) = q0 E
-7) (q0,E,0) = q0 E
+----------Ramificacoes geradas---------
 
+automata inserida: 01011
+
+E - state change of p0 to q0
+stack: ['x0', 'z0']
+
+0 - state change from q0 to q0
+stack: ['x0', 'z0', '0']
+
+1 - state change from q0 to q0
+stack: ['x0', 'z0']
+
+0 - state change from q0 to q0
+stack: ['x0', 'z0', '0']
+
+1 - state change from q0 to q0
+stack: ['x0', 'z0']
+
+1 - state change from q0 to q0
+stack: ['x0', 'z0', '1']
+
+E - state change of q0 to p
+stack: ['x0', 'z0']
+
+E - state change of p to p
+stack: ['x0']
+
+E - state change of p to p
+stack: []
+
+------ACCEPTED HERE!------
+
+Rollback to state p with stack ['x0']
+
+Rollback to state p with stack ['x0', 'z0']
+
+Rollback to state q0 with stack ['x0', 'z0', '1']
+
+Rollback to state q0 with stack ['x0', 'z0']
+
+E - state change of q0 to q0
+stack: ['x0']
+
+E - state change of q0 to p
+stack: []
+
+Rollback to state q0 with stack ['x0']
+
+Rollback to state q0 with stack ['x0', 'z0']
+
+E - state change of q0 to p
+stack: ['x0']
+
+E - state change of p to p
+stack: []
+
+Rollback to state p with stack ['x0']
+
+Rollback to state q0 with stack ['x0', 'z0']
+
+Rollback to state q0 with stack ['x0', 'z0', '0']
+
+E - state change of q0 to p
+stack: ['x0', 'z0']
+
+E - state change of p to p
+stack: ['x0']
+
+E - state change of p to p
+stack: []
+
+Rollback to state p with stack ['x0']
+
+Rollback to state p with stack ['x0', 'z0']
+
+Rollback to state q0 with stack ['x0', 'z0', '0']
+
+Rollback to state q0 with stack ['x0', 'z0']
+
+E - state change of q0 to q0
+stack: ['x0']
+
+E - state change of q0 to p
+stack: []
+
+Rollback to state q0 with stack ['x0']
+
+Rollback to state q0 with stack ['x0', 'z0']
+
+E - state change of q0 to p
+stack: ['x0']
+
+E - state change of p to p
+stack: []
+
+Rollback to state p with stack ['x0']
+
+Rollback to state q0 with stack ['x0', 'z0']
+
+Rollback to state q0 with stack ['x0', 'z0', '0']
+
+E - state change of q0 to p
+stack: ['x0', 'z0']
+
+E - state change of p to p
+stack: ['x0']
+
+E - state change of p to p
+stack: []
+
+Rollback to state p with stack ['x0']
+
+Rollback to state p with stack ['x0', 'z0']
+
+Rollback to state q0 with stack ['x0', 'z0', '0']
+
+Rollback to state q0 with stack ['x0', 'z0']
+
+E - state change of q0 to q0
+stack: ['x0']
+
+E - state change of q0 to p
+stack: []
+
+Rollback to state q0 with stack ['x0']
+
+Rollback to state q0 with stack ['x0', 'z0']
+
+E - state change of q0 to p
+stack: ['x0']
+
+E - state change of p to p
+stack: []
+
+Rollback to state p with stack ['x0']
+
+Rollback to state q0 with stack ['x0', 'z0']
+
+Rollback to state p0 with stack ['x0']
+
+01011 -> The tape was accept!
