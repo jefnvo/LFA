@@ -68,7 +68,7 @@ def getMoves(state,automata):#q0 - 0011
             print("------ACCEPTED HERE!------\n\n")            
             return
 
-def principal(automata, defAutomata):
+def main(automata, defAutomata):
     global handler, index, flag, rules, register, stack
     ##The next lines will be populate our automata from the definition file##
     handler = open(defAutomata, "r")
@@ -127,7 +127,7 @@ def principal(automata, defAutomata):
 
 
 
-principal('000111',"./automata_empty_definition.txt")
+main('000111',"./automata_empty_definition.txt")
 
 
 
