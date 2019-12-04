@@ -95,6 +95,7 @@ def principal(automata, defAutomata):
     for i in range(5,len(lines)):
         rules.append(lines[i].split())
     
+    
     for i in range(0,n_rules):
         aux = rules[i] # q0 0 z0 q0 0,z0 
         aux2 = aux[4].split(",") #[0 z0]
@@ -106,19 +107,20 @@ def principal(automata, defAutomata):
     
     
     
-    print("Alphabet: " + str(alphabet) + "\n" + "States: " +
-            str(states) + "\n" + "Initial State: " + str(initial_state) + "\n" + 
-            "Final State: " + str(final_state) + "\n" + "Stack Symbol: " + str(stack_symbol[0])
-            + "\n\nRegras: " + "\n")
+    print("Alphabet: " + str(alphabet) + "\n" + 
+          "States: " + str(states) + "\n" + 
+          "Initial State: " + str(initial_state) + "\n" + 
+          "Final State: " + str(final_state) + "\n" + 
+          "Stack Symbol: " + str(stack_symbol[0])+ "\n")
 
-    #print the rules
+    print("The automata has the follow definition: \n\n")
     for i in range(0,n_rules):
         aux = rules[i]
         print(str(i+1) + ") " + "(" + str(aux[0]) + "," + str(aux[1]) + "," + str(aux[2]) + ") = " + str(aux[3])+"\n")
 
     print("\n")
 
-    print("\n----------Ramificacoes geradas---------\n\n")
+    print("\n----------ID generates of PDA---------\n\n")
     print("automata inserida: " + automata + "\n")
 
     print('\n')
@@ -135,7 +137,7 @@ def principal(automata, defAutomata):
         print(automata+ " -> The tape was accept!")
 
 
-principal('0011','./automata_final_definition.txt')
+principal('1011','./automata_final_definition.txt')
 
 
 
