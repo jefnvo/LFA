@@ -115,8 +115,8 @@ def principal(automata, defAutomata):
 
     print("\n")
 
-    print("\n----------Ramificacoes geradas---------\n\n")
-    print("automata inserida: " + automata + "\n")
+    print("\n----------LEVELS---------\n\n")
+    print("automata at level: " + automata + "\n")
 
     print('\n')
 
