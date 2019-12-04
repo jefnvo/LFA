@@ -133,7 +133,7 @@ def principal(automata, defAutomata):
 
 
 
-principal('0011',"./automata_empty_definition.txt")
+principal('000111',"./automata_empty_definition.txt")
 
 
 

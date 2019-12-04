@@ -1,20 +1,11 @@
-q0 p0 p
+q1
 01
-x0
-p0
-q0 0 z0 q0 0,z0
-q0 1 z0 q0 1,z0
-q0 0 0 q0 0,0
-q0 1 1 q0 1,1
-q0 1 0 q0 E
-q0 0 1 q0 E
-q0 E z0 q0 E
-p0 E x0 q0 z0,x0
-q0 E z0 p E
-q0 E x0 p E
-q0 E 0 p E
-q0 E 1 p E
-p E 0 p E
-p E 1 p E
-p E z0 p E
-p E x0 p E
+z0
+q1
+q1 0 z0 q1 0,z0
+q1 1 z0 q1 1,z0
+q1 0 0 q1 0,0
+q1 1 1 q1 1,1
+q1 1 0 q1 E
+q1 0 1 q1 E
+q1 E z0 q1 E
