@@ -104,16 +104,10 @@ def principal(automata, defAutomata):
         rules[i] = aux #[q0 0 z0 [q0 0 z0 ]]
         print (rules[i])
     
-    print("Alphabet: " + str(alphabet) + "\n" + "States: " +
-            str(states) + "\n" + "Initial State: " + str(initial_state) + "\n" + 
-            "Stack symbol: " + str(stack[0])
-            + "\n\nrules: " + "\n")
-
-    for i in range(0,n_rules):
-        aux = rules[i]
-        print(str(i+1) + ") " + "(" + str(aux[0]) + "," + str(aux[1]) + "," + str(aux[2]) + ") = " + str(aux[3])+"\n")
-
-    print("\n")
+    print("Alphabet: " + str(alphabet) + "\n" + 
+          "States: " + str(states) + "\n" + 
+          "Initial State: " + str(initial_state) + "\n" + 
+          "Stack symbol: " + str(stack[0]))
 
     print("\n----------LEVELS---------\n\n")
     print("automata at level: " + automata + "\n")
