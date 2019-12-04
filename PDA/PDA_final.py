@@ -121,7 +121,7 @@ def principal(automata, defAutomata):
     print("\n")
 
     print("\n----------ID generates of PDA---------\n\n")
-    print("automata inserida: " + automata + "\n")
+    print("automata at level: " + automata + "\n")
 
     print('\n')
 
