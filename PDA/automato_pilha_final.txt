@@ -1,0 +1,15 @@
+ab
+q0 q1 q2 p0 p
+p0
+p
+x0
+q0 a z0 q0 a,a,z0
+q0 E z0 q1 z0
+q0 a a q0 a,a,a
+q0 E a q1 a
+q1 b a q1 E
+q1 E z0 q2 z0
+p0 E x0 q0 z0,x0
+q0 E x0 p E
+q1 E x0 p E
+q2 E x0 p E
